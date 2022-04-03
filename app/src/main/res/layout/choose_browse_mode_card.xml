@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/small_rounded_corners"
+    android:theme="@style/Theme.Projekt_Aplikacje"
+    app:cardBackgroundColor="@color/blue5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/search_in"
+            android:textAlignment="center"
+            android:textColor="@color/blue1"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/communityButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/small_rounded_corners"
+            android:backgroundTint="@color/blue3"
+            android:padding="0dp"
+            android:text="@string/community_db"
+            android:textColor="@color/blue6"
+            app:iconPadding="0dp"
+            app:iconTint="@null" />
+
+        <Button
+            android:id="@+id/APIButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/small_rounded_corners"
+            android:backgroundTint="@color/blue3"
+            android:padding="0dp"
+            android:text="@string/spoonacular_db"
+            android:textColor="@color/blue6" />
+
+        <Button
+            android:id="@+id/favouritesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/small_rounded_corners"
+            android:backgroundTint="@color/blue3"
+            android:padding="0dp"
+            android:text="@string/your_favourites"
+            android:textColor="@color/blue6" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

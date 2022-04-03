@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@drawable/rounded_corners"
+    android:backgroundTint="@color/blue4"
+    android:padding="5dp"
+    android:theme="@style/Theme.Projekt_Aplikacje"
+    app:cardBackgroundColor="@color/blue5">
+
+    <LinearLayout
+        android:id="@+id/ingredientsCardLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/blue3"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ingredientsCardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue3"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/ingredientsCardTitle"
+                    layout="@layout/item_content_title" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

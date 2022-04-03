@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/small_rounded_corners"
+    android:backgroundTint="@color/blue4"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/small_rounded_corners"
+            android:backgroundTint="@color/blue5"
+            android:cropToPadding="false"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/search" />
+
+        <SearchView
+            android:id="@+id/searchPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/small_rounded_corners"
+            android:focusable="false"
+            android:iconifiedByDefault="false"
+            android:searchIcon="@null"
+            app:searchIcon="@null" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/filterDiets"
+        layout="@layout/filter" />
+
+    <include
+        android:id="@+id/filterCuisines"
+        layout="@layout/filter" />
+
+    <include
+        android:id="@+id/filterTypes"
+        layout="@layout/filter" />
+
+</LinearLayout>

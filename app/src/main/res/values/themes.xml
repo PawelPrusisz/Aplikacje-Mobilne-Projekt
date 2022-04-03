@@ -1,0 +1,11 @@
+<resources>
+    <style name="Theme.Projekt_Aplikacje" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue3</item>
+        <item name="colorPrimaryVariant">@color/blue5</item>
+        <item name="colorOnPrimary">@color/blue6</item>
+        <item name="colorSecondary">@color/blue4</item>
+        <item name="colorSecondaryVariant">@color/blue4_1</item>
+        <item name="colorOnSecondary">@color/blue1</item>
+        <item name="android:statusBarColor">?attr/colorOnPrimary</item>
+    </style>
+</resources>

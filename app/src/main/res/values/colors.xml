@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="gold">#FFD700</color>
+
+    <color name="blue1">#011f4b</color>
+    <color name="blue2">#03396c</color>
+    <color name="blue3">#005b96</color>
+    <color name="blue4_1">#466B7D</color>
+    <color name="blue4">#6497b1</color>
+    <color name="blue5">#b3cde0</color>
+    <color name="blue6">#CCEAFF</color>
+
+    <color name="app_bg">@color/blue6</color>
+    <color name="search_bg">@color/app_bg</color>
+    <color name="item_title">@color/blue3</color>
+    <color name="item_content">@color/blue2</color>
+    <color name="button_color">@color/blue4</color>
+    <color name="item_bg">@color/blue5</color>
+    
+    
+    <color name="calories_color">#d11141</color>
+    <color name="fat_color">#00b159</color>
+    <color name="carbohydrates_color">#f37735</color>
+    <color name="sugar_color">#00aedb</color>
+    <color name="protein_color">#ffc425</color>
+    <color name="fiber_color">#ffaaa5 </color>
+
+</resources>

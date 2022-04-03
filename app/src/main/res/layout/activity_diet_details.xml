@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textRecipeTitleDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/item_title"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            tools:text="Przepis na nalesniki" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart">
+
+
+            <ImageView
+                android:id="@+id/imageViewRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/dish_placeholder" />
+
+
+            <LinearLayout
+                android:id="@+id/attributesLayoutDetails"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/gluten_icon"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <fragment
+            android:id="@+id/recipeInfoFragment"
+            android:name="com.example.projekt_aplikacje.ui.browse.RecipeInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout="@layout/fragment_recipe_info" />
+
+        <include
+            android:id="@+id/ratingBarDescDetails"
+            layout="@layout/item_content_title" />
+
+        <RatingBar
+            android:id="@+id/ratingBarDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:isIndicator="true"
+            android:max="5"
+            android:numStars="5"
+            android:progressTint="@color/gold"
+            android:rating="5"
+            android:stepSize="0.1" />
+
+        <include
+            android:id="@+id/progressBarDescDetail"
+            layout="@layout/item_content_title" />
+
+        <LinearLayout
+            android:id="@+id/progressBarsDetailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_corners"
+            android:orientation="vertical"
+            android:padding="5dp" />
+
+    </LinearLayout>
+</ScrollView>

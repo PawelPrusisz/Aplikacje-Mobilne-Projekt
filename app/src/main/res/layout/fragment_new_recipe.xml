@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".ui.browse.NewRecipeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewRecipeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/new_recipe"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/item_title"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <include
+            android:id="@+id/pictureDesc"
+            layout="@layout/item_content_title" />
+
+        <ImageView
+            android:id="@+id/imageViewDishPicture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:cropToPadding="true"
+            android:focusable="true"
+            android:src="@drawable/dish_placeholder" />
+
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/recipe_name"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <include
+            android:id="@+id/attributesDesc"
+            layout="@layout/item_content_title" />
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupAttributes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/blue4"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp" />
+
+        <include
+            android:id="@+id/cuisinesDesc"
+            layout="@layout/item_content_title" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupCuisines"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/blue4"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    app:singleLine="true">
+
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <include
+            android:id="@+id/dishTypesDesc"
+            layout="@layout/item_content_title" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupDishTypes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/blue4"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
+
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/servingsDesc"
+                layout="@layout/item_content_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/prepareTimeDesc"
+                layout="@layout/item_content_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextServings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/number_of_servings"
+                android:inputType="number"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/editTextPrepareTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/prepare_time"
+                android:inputType="number"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/ratingBarDesc"
+            layout="@layout/item_content_title" />
+
+        <RatingBar
+            android:id="@+id/healthRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:max="5"
+            android:numStars="5"
+            android:progressTint="@color/gold"
+            android:rating="5"
+            android:stepSize="0.1" />
+
+        <include
+            android:id="@+id/ingredientsDesc"
+            layout="@layout/item_content_title" />
+
+        <LinearLayout
+            android:id="@+id/ingredientsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_corners"
+            android:orientation="vertical" />
+
+        <include
+            android:id="@+id/ingredientsCard"
+            layout="@layout/add_ingredient" />
+
+        <com.skydoves.transformationlayout.TransformationLayout
+            android:id="@+id/transformationLayoutIngredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:transformation_duration="550"
+            app:transformation_targetView="@+id/ingredientsCard">
+
+            <ImageButton
+                android:id="@+id/buttonIngredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/blue3"
+                android:padding="5dp"
+                android:src="@android:drawable/ic_input_add"
+                app:tint="@color/button_color" />
+        </com.skydoves.transformationlayout.TransformationLayout>
+
+        <include
+            android:id="@+id/nutritionDesc"
+            layout="@layout/item_content_title" />
+
+        <LinearLayout
+            android:id="@+id/nutritionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_corners"
+            android:orientation="vertical" />
+
+        <include
+            android:id="@+id/nutritionCard"
+            layout="@layout/add_nutrition" />
+
+        <com.skydoves.transformationlayout.TransformationLayout
+            android:id="@+id/transformationLayoutNutrition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:transformation_duration="550"
+            app:transformation_targetView="@+id/nutritionCard">
+
+            <ImageButton
+                android:id="@+id/buttonNutrition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/blue3"
+                android:padding="5dp"
+                android:src="@android:drawable/ic_input_add"
+                app:tint="@color/button_color" />
+        </com.skydoves.transformationlayout.TransformationLayout>
+
+        <include
+            android:id="@+id/stepsDesc"
+            layout="@layout/item_content_title" />
+
+        <LinearLayout
+            android:id="@+id/stepsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_corners"
+            android:orientation="vertical" />
+
+        <include
+            android:id="@+id/stepsCard"
+            layout="@layout/add_step" />
+
+        <com.skydoves.transformationlayout.TransformationLayout
+            android:id="@+id/transformationLayoutSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:transformation_duration="550"
+            app:transformation_targetView="@+id/stepsCard">
+
+            <ImageButton
+                android:id="@+id/buttonSteps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/blue3"
+                android:padding="5dp"
+                android:src="@android:drawable/ic_input_add"
+                app:tint="@color/button_color" />
+        </com.skydoves.transformationlayout.TransformationLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <Button
+            android:id="@+id/buttonAddRecipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:text="@string/add_recipe" />
+
+
+    </LinearLayout>
+
+</ScrollView>

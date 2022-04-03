@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/app_bg"
+    tools:context=".ui.browse.RecipeInfo">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewRecipeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/item_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="Tset Test" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <include
+            android:id="@+id/ingredientsDesc"
+            layout="@layout/item_content_title"
+            android:text="@string/ingredients" />
+
+        <LinearLayout
+            android:id="@+id/ingredientsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_corners"
+            android:orientation="vertical"
+            android:padding="10dp" />
+
+
+        <TextView
+            android:id="@+id/textViewTimeInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/readyIn"
+            android:textAlignment="center"
+            android:textColor="@color/item_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewServingsInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/servings"
+            android:textAlignment="center"
+            android:textColor="@color/item_content"
+            android:textSize="16sp" />
+
+        <include
+            android:id="@+id/recipeDesc"
+            layout="@layout/item_content_title"
+            android:text="@string/recipe" />
+
+        <LinearLayout
+            android:id="@+id/stepsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_corners"
+            android:orientation="vertical"
+            android:padding="10dp" />
+    </LinearLayout>
+</ScrollView>
